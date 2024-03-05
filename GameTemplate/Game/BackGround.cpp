@@ -4,8 +4,8 @@
 BackGround::BackGround()
 {
 
-	modelRender.Update();
-	physicsStaticObject.CreateFromModel(modelRender.GetModel(), modelRender.GetModel().GetWorldMatrix());
+	m_modelRender.Update();
+	m_physicsStaticObject.CreateFromModel(m_modelRender.GetModel(), m_modelRender.GetModel().GetWorldMatrix());
 }
 
 BackGround::~BackGround()
@@ -15,5 +15,5 @@ BackGround::~BackGround()
 
 void BackGround::Render(RenderContext& rc)
 {
-	modelRender.Draw(rc);
+	m_modelRender.Draw(rc);
 }
